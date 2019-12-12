@@ -1,0 +1,119 @@
+
+@import url('https://fonts.googleapis.com/css?family=Ubuntu+Condensed');
+.menu-main {
+  list-style: none;
+  margin: 40px 0 5px;
+  padding: 25px 0 5px;
+  text-align: center;
+  background: white;
+}
+.menu-main li {display: inline-block;}
+.menu-main li:after {
+
+  color: #606060;
+  display: inline-block;
+  vertical-align:top;
+}
+.menu-main li:last-child:after {content: none;}
+.menu-main a {
+  text-decoration: none;
+  font-family: 'Ubuntu Condensed', sans-serif;
+  letter-spacing: 2px;
+  position: relative;
+  padding-bottom: 10px;
+  padding-top: 10px;
+  margin: 0 34px 0 30px;
+  font-size: 24px;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: color .2s;
+}
+.menu-main a, .menu-main a:visited {color: #9d999d;}
+.menu-main a.current, .menu-main a:hover{color: #536dff;}
+.menu-main a:before,
+.menu-main a:after {
+  content: "";
+  position: absolute;
+  top: auto;
+  right: 50%;
+  bottom: -5px;
+  left: 50%;
+  background: #536dff;
+
+}
+
+.active{
+    border: blue solid 3px;
+    border-radius: 5px;
+}
+
+.menu-main a:hover:before, .menu-main .current:before {left: 0;}
+.menu-main a:hover:after, .menu-main .current:after {right: 0;}   
+
+.border {
+    list-style: none;
+    padding: 0;
+    width: 55%;
+    }
+    .border li {
+    font-family: "Trebuchet MS", "Lucida Sans";
+    padding: 7px 20px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border-left: 20px solid #f05d22; 
+    box-shadow: 2px -2px 5px 0 rgba(0,0,0,.1),
+         -2px -2px 5px 0 rgba(0,0,0,.1),
+        2px 2px 5px 0 rgba(0,0,0,.1),
+        -2px 2px 5px 0 rgba(0,0,0,.1);
+    font-size: 25px;
+    letter-spacing: 2px;
+    transition: 0.3s all linear;
+    }
+    .border li:nth-child(2){border-color: #8bc63e;}
+    .border li:nth-child(3){border-color: #fcba30;}
+    .border li:nth-child(4){border-color: #1ccfc9;}
+    .border li:nth-child(5){border-color: #493224;}
+    .border li:hover {border-left: 20px solid transparent;}
+    .border li:nth-child(1):hover {border-right: 20px solid #f05d22;}
+    .border li:nth-child(2):hover {border-right: 20px solid #8bc63e;}
+    .border li:nth-child(3):hover {border-right: 20px solid #fcba30;}
+    .border li:nth-child(4):hover {border-right: 20px solid #1ccfc9;}
+    .border li:nth-child(5):hover {border-right: 20px solid #493224;}
+
+    button {
+
+        background: #0066A2;
+
+        margin-top: 20px;
+        
+        color: white;
+        
+        border-style: outset;
+        
+        border-color: #0066A2;
+        
+        height: 50px;
+        
+        width: 150px;
+        font-family: 'Ubuntu Condensed', sans-serif;
+        
+        font-size:15pt ;
+        
+        text-shadow:none;
+        
+        }
+      input{
+          width: 30%;
+          height: 30px;
+          border-radius: 5px;
+          border: blue solid 4px;
+          background-color: rgb(219, 219, 255);
+          font-size: 15pt;
+          text-align: center;
+          font: bold arial, sans-serif;
+          
+      }
+      h2{
+        font-family: 'Ubuntu Condensed', sans-serif;
+        font-size: 24pt;
+      }

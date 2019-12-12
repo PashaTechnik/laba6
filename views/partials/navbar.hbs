@@ -1,9 +1,15 @@
-<nav>
-<a href="/">Main</a>
-<ul>
-    <li><a href="/">Main</a></li>
-    <li><a href="/create">Create</a></li>
-</ul>
 
 
-</nav>
+  <ul class="menu-main">
+ {{#if isIndex}}
+      <li class="active"><a href="/">List</a></li>
+      {{else}}
+      <li><a href="/">List</a></li>
+      {{/if}}
+
+      {{#if isCreate}}
+      <li class="active"><a href="/create">Create</a></li>
+      {{else}}
+      <li><a href="/create">Create</a></li>
+      {{/if}}
+      </ul>
