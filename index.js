@@ -16,19 +16,29 @@ app.engine('hbs', hbs.engine)
 app.set('view engine', 'hbs')
 app.set('views', 'views')
 
+app.use(express.urlencoded({ extended: true }))
 app.use(todoRoutes)
 
 
-function start(){
-    mongoose.connect('mongodb+srv://Pasha:12pasha04@cluster0-ylqzb.mongodb.net/todos', {
-        useNewUrlParser:true,
-        useFindAndModify:false,
-        useUnifiedTopology: true
-        
-    })
-    app.listen(PORT, () => {
-        console.log("Server has been started...")
-    })
-}
+
+async function start() {
+    try {
+      await mongoose.connect(
+        'mongodb+srv://Pasha:12pasha04@cluster0-ylqzb.mongodb.net/todos',
+        {
+          useNewUrlParser: true,
+          useFindAndModify: false,
+          useUnifiedTopology: true
+        }
+      )
+      app.listen(PORT, () => {
+        console.log('Server has been started...')
+      })
+    } catch (e) {
+      console.log(e)
+    }
+  }
+
+
 
 start();

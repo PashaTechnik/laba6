@@ -1,11 +1,17 @@
 const { Router } = require('express')
+const Todo = require('../views/Todo')
 const router = Router()
 
-router.get('/', (req, res) => {
+router.get('/', async (req, res) => {
+  const todos = await Todo.find({})
 
-  res.render('index')
+  res.render('index', {
+    title: 'Todos list',
+    isIndex: true,
+    todos
+  })
 })
-/*
+
 router.get('/create', (req, res) => {
   res.render('create', {
     title: 'Create todo',
@@ -30,5 +36,5 @@ router.post('/complete', async (req, res) => {
 
   res.redirect('/')
 })
-*/
+
 module.exports = router
