@@ -27,6 +27,13 @@ router.post('/create', async (req, res) => {
   await todo.save()
   res.redirect('/')
 })
+router.get('/:_id', async (req, res) =>{
+  res.render('full', {
+    title: 'full'
+  })
+});
+
+
 
 
 module.exports = router
