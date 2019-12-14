@@ -28,8 +28,10 @@ router.post('/create', async (req, res) => {
   res.redirect('/')
 })
 router.get('/:_id', async (req, res) =>{
+  const Full = await Todo.findById(req.params._id);
   res.render('full', {
-    title: 'full'
+    title: 'full',
+    Full
   })
 });
 
