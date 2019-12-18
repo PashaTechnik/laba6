@@ -36,6 +36,13 @@ router.get('/:_id', async (req, res) =>{
 });
 
 
+router.post('/:_id', async (req, res) => {
+
+  result = await Todo.deleteOne({ _id:req.params._id });
+  res.redirect('/')
+
+  console.log(`document ${req.params._id} was deleted.`);
+})
 
 
 module.exports = router

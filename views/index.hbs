@@ -5,14 +5,12 @@
 {{#if todos.length}}
 <ul class="border">
   {{#each todos}}
+
   <li onclick="location.href='/{{_id}}'"; style="cursor:pointer;">
-    <form action="/complete" method="POST">
+    <form action="/{{_id}}" method="POST">
       <label>
-        {{#if completed}}
         <span class="completed">{{title}}</span>
-        {{else}}
-        <span>{{title}}</span>
-        {{/if}}
+        <button class="btn"><i class="fa fa-close"></i></button>
         <input type="hidden" value="{{_id}}" name="id">
       </label>
     </form>

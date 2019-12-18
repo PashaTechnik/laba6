@@ -80,7 +80,7 @@
     .border li:nth-child(4):hover {border-right: 20px solid #1ccfc9;}
     .border li:nth-child(5):hover {border-right: 20px solid #493224;}
 
-    button {
+    button.but {
 
         background: #0066A2;
 
@@ -117,3 +117,15 @@
         font-family: 'Ubuntu Condensed', sans-serif;
         font-size: 24pt;
       }
+     button.btn{
+      background: #0066A2;
+
+      
+      color: white;
+      
+      border-style: outset;
+      
+      border-color: #0066A2;
+      border-radius: 3px;
+      text-shadow:none;
+     }
